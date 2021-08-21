@@ -1,0 +1,183 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+  body   { background-color:  #121212; color: white; }
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.card {
+  width: 250px;                 /* Set width of cards */
+  display: flex;                /* Children use Flexbox */
+  flex-direction: column;       /* Rotate Axis */
+  border: 1px solid #EF9A9A;    /* Set up Border */
+  border-radius: 4px;           /* Slightly Curve edges */
+  overflow: hidden;             /* Fixes the corners */
+  margin: 5px;                  /* Add space between cards */
+  height:300px;
+}
+
+.compute-card {
+  border: 1px solid #0288D1; 
+}
+
+.input-card {
+  border: 1px solid #388E3C; 
+}
+
+.align-card {
+  border: 1px solid #FFA000; 
+}
+
+.politics-card {
+  border: 1px solid #00796B; 
+}
+
+.fun-card {
+  border: 1px solid #512DA8; 
+}
+
+.card-header {
+  color: #D32F2F;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #EF9A9A;
+  background-color: #FFEBEE;
+  padding: 5px 10px;
+}
+
+.compute-header {
+  color: #0288D1;
+  border-bottom: 1px solid #0288D1;
+  background-color: #B3E5FC;
+}
+
+.input-header {
+  color: #388E3C;
+  border-bottom: 1px solid #388E3C;
+  background-color: #C8E6C9;
+}
+
+.align-header {
+  color: #FFA000;
+  border-bottom: 1px solid #FFA000;
+  background-color: #FFECB3;
+}
+
+.politics-header {
+  color: #00796B;
+  border-bottom: 1px solid #00796B;
+  background-color: #B2DFDB;
+}
+
+.fun-header {
+  color: #512DA8;
+  border-bottom: 1px solid #512DA8;
+  background-color: #D1C4E9;
+}
+
+.card-main {
+  display: flex;              /* Children use Flexbox */
+  flex-direction: column;     /* Rotate Axis to Vertical */
+  justify-content: center;    /* Group Children in Center */
+  align-items: center;        /* Group Children in Center (on cross axis) */
+  padding: 15px 0;            /* Add padding to the top/bottom */
+}
+
+.material-icons {
+  font-size: 36px;
+  color: #D32F2F;
+  margin-bottom: 5px;
+}
+
+.icon-compute {
+  color: #448AFF;
+}
+
+.icon-input {
+  color: #388E3C;
+}
+
+.icon-align {
+  color: #FFA000;
+}
+
+.icon-politics {
+  color: #00796B;
+}
+
+.icon-fun {
+  color: #512DA8;
+}
+
+.main-description {
+  color: #D32F2F;
+  font-size: 12px;
+  text-align: center;
+  margin: 25px;
+}
+
+.compute-desc {
+  color: #0288D1;
+}
+
+.input-desc {
+  color: #4CAF50;
+}
+
+.align-desc {
+  color: #FFA000;
+}
+
+.politics-desc {
+  color: #00796B;
+}
+
+.fun-desc {
+  color: #512DA8;
+}
+
+.main-header {
+  color: #D32F2F;
+  font-size: 26px;
+  text-align: center;
+  font-weight: bold;
+  margin:10px;
+}
+
+.compute-text-header {
+  color: #0288D1 ;
+}
+
+.input-text-header {
+  color: #388E3C;
+}
+
+.align-text-header {
+  color: #FFA000;
+}
+
+.politics-text-header {
+  color: #00796B;
+}
+
+.fun-text-header {
+  color: #512DA8;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > .card {
+    flex: 1 1 30%; /*grow | shrink | basis */
+}

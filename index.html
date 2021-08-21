@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI Safety Game</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="AI Safety Game is based on a Lesswrong thread and allows you to easily get randomized cards to get started and play.">
+  <meta property="og:description" content="AI Safety Game is based on a Lesswrong thread and allows you to easily get randomized cards to get started and play.">
+  <meta property="og:title" content="AI Safety Game" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aisafetygame.tk" />
+  <meta property="og:image" content="https://aisafetygame.tk/images/icons/icon-512x512.png" />
+
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+  <link rel="manifest" href="images/icons/site.webmanifest">
+  <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#2196F3">
+
+
+</head>
+  <body>
+    <h1>AI Safety Game</h1>
+    <h2>Your Goal: Save the world and make sure humanity thrives.</h2>
+    <div class="container">
+        <div class="card compute-card">
+        <div class="card-header compute-header">Compute</div>
+        <div class="card-main">
+           <i class="material-icons icon-compute">computer</i>
+          <div class="main-header compute-text-header">Grahams number flops</div>
+          <div class="main-description compute-desc">A computer with Grahams number flops in serial, and Grahams number bytes of RAM.</div>
+        </div>
+      </div>
+      
+      <div class="card input-card">
+        <div class="card-header input-header">Input-Output</div>
+        <div class="card-main">
+           <i class="material-icons icon-input">file_download</i>
+          <div class="main-header input-text-header ">Clippy</div>
+          <div class="main-description input-desc">You have a .exe file on your laptop that, if clicked, runs a superintelligent paperclip-maximizer. Specifically, it's the program a paperclip-loving galaxy-spanning singleton in a different universe would write, if they knew they had to run it on your laptop in your universe. Turns out your laptop is enough to run some pretty smart behaviors, if the code is optimized well enough.</div>
+        </div>
+      </div>
+      
+      <div class="card align-card">
+        <div class="card-header align-header">Alignment Data</div>
+        <div class="card-main">
+           <i class="material-icons"><span class="material-icons-outlined icon-align">
+    smart_toy
+    </span></i>
+          <div class="main-header align-text-header ">Clippy Did Nothing Wrong</div>
+          <div class="main-description align-desc ">It turns out that actually the human utility function (or: the true morality, if you believe in that sort of thing) really is just the total number of paperclips in existence. </div>
+        </div>
+      </div>
+      
+      <div class="card politics-card">
+        <div class="card-header politics-header">Politics</div>
+        <div class="card-main">
+           <i class="material-icons icon-politics">account_circle</i>
+          <div class="main-header politics-text-header ">Phone to World Leaders</div>
+          <div class="main-description politics-desc">You magically know the contact info of all world leaders at all times. If they change it, you know what it changes to.</div>
+        </div>
+      </div>
+      
+      <div class="card fun-card">
+        <div class="card-header fun-header">Fun</div>
+        <div class="card-main">
+           <i class="material-icons icon-fun">celebration</i>
+          <div class="main-header fun-text-header">Speed</div>
+          <div class="main-description fun-desc">You can put your brain into a state where it thinks 10x faster than normal. The whole world appears to you to be moving in slow-mo. Your sleep cycle speeds up too.</div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">Problem</div>
+        <div class="card-main">
+           <i class="material-icons">warning</i>
+          <div class="main-header problem-text-header">Putin Wants You Dead</div>
+          <div class="main-description problem-desc">Ever heard of polonium poisoning? Ah. Well, be advised that for some reason you are on Putin's hit list; you expect an attempt in the next four months.</div>
+        </div>
+      </div>
+      
+    </div>
+    <h3>You can find out about the original game on <a href="https://www.lesswrong.com/posts/Nex8EgEJPsn7dvoQB/the-ai-safety-game-updated">Lesswrong</a></h3>
+  </body>
+  <script src="js/game.js"> </script>
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    };
+  </script>
+</html>
