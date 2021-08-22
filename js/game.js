@@ -82,12 +82,12 @@ console.log(params)
 btn.addEventListener('click', async () => {
 	let url = new URL(document.location);
 
-	url.searchParams.append('compute', compute_card_index);
-	url.searchParams.append('input', input_card_index);
-	url.searchParams.append('alignment', alignment_card_index);
-	url.searchParams.append('fun', fun_card_index);
-	url.searchParams.append('politics', politics_card_index);
-	url.searchParams.append('problem', problem_card_index);
+	url.searchParams.set('compute', compute_card_index);
+	url.searchParams.set('input', input_card_index);
+	url.searchParams.set('alignment', alignment_card_index);
+	url.searchParams.set('fun', fun_card_index);
+	url.searchParams.set('politics', politics_card_index);
+	url.searchParams.set('problem', problem_card_index);
 
 	const shareData = {
 	  title: 'AI Safety Game',

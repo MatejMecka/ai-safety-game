@@ -18,7 +18,7 @@ h1, h2 {
   border: 1px solid #EF9A9A;    /* Set up Border */
   border-radius: 4px;           /* Slightly Curve edges */
   overflow: hidden;             /* Fixes the corners */
-  margin: 5px;                  /* Add space between cards */
+  margin: 20px;                  /* Add space between cards */
   height:300px;
   overflow-y: scroll;
 }
@@ -119,7 +119,7 @@ h1, h2 {
 
 .main-description {
   color: #D32F2F;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   margin: 25px;
 }
