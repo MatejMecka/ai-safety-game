@@ -17,13 +17,40 @@ const fun_cards = JSON.parse(fun_cards_json)['data']
 const politics_cards = JSON.parse(politics_cards_json)['data']
 const problem_cards = JSON.parse(problem_cards_json)['data']
 
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
 
-const compute_card = compute_cards[Math.floor(Math.random()*compute_cards.length)];
-const input_card = input_cards[Math.floor(Math.random()*input_cards.length)];
-const alignment_card = alignment_cards[Math.floor(Math.random()*alignment_cards.length)];
-const fun_card = fun_cards[Math.floor(Math.random()*fun_cards.length)];
-const politics_card = politics_cards[Math.floor(Math.random()*politics_cards.length)];
-const problem_card = problem_cards[Math.floor(Math.random()*problem_cards.length)];
+let compute_card_index = 0
+let input_card_index = 0
+let alignment_card_index = 0
+let fun_card_index = 0
+let politics_card_index = 0
+let problem_card_index = 0
+
+if(params['compute'] >= 0 && params['input'] >= 0 && params['alignment'] >= 0 && params['fun'] >= 0 && params['politics'] >= 0 && params['fun'] >= 0 ) {
+	compute_card_index = parseInt(params['compute'])
+ 	input_card_index = parseInt(params['input'])
+ 	alignment_card_index = parseInt(params['alignment'])
+ 	fun_card_index = parseInt(params['fun'])
+ 	politics_card_index = parseInt(params['politics'])
+ 	problem_card_index = parseInt(params['problem'])
+} else {
+	compute_card_index = Math.floor(Math.random()*compute_cards.length)
+	input_card_index = Math.floor(Math.random()*input_cards.length)
+	alignment_card_index = Math.floor(Math.random()*alignment_cards.length)
+	fun_card_index = Math.floor(Math.random()*fun_cards.length)
+	politics_card_index = Math.floor(Math.random()*politics_cards.length)
+	problem_card_index = Math.floor(Math.random()*problem_cards.length)
+}
+
+console.log(problem_card_index)
+
+const compute_card = compute_cards[compute_card_index];
+const input_card = input_cards[input_card_index];
+const alignment_card = alignment_cards[alignment_card_index];
+const fun_card = fun_cards[fun_card_index];
+const politics_card = politics_cards[politics_card_index];
+const problem_card = problem_cards[problem_card_index];
 
 document.querySelector('.compute-text-header').innerText = compute_card[0]
 document.querySelector('.compute-desc').innerText = compute_card[1]
@@ -47,3 +74,31 @@ if(problem_card[0] == "Putin Wants You Dead"){
 	var audio = new Audio('audio/russia.mp3');
 	audio.play();
 }
+
+const btn = document.querySelector('button');
+
+console.log(params)
+
+btn.addEventListener('click', async () => {
+	let url = new URL(document.location);
+
+	url.searchParams.append('compute', compute_card_index);
+	url.searchParams.append('input', input_card_index);
+	url.searchParams.append('alignment', alignment_card_index);
+	url.searchParams.append('fun', fun_card_index);
+	url.searchParams.append('politics', politics_card_index);
+	url.searchParams.append('problem', problem_card_index);
+
+	const shareData = {
+	  title: 'AI Safety Game',
+	  text: "Let's play with the following cards!",
+	  url: url,
+	}
+
+	try {
+		await navigator.share(shareData)
+	} catch(err) {
+		navigator.clipboard.writeText(shareData['url'])
+		console.log(err)
+	}
+});
