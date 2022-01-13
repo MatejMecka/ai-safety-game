@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "tk.aisafetygame.twa",
+                     "sha256_cert_fingerprints": ["E5:47:7C:B7:C3:17:7D:E7:40:90:65:01:A5:43:C4:11:A4:25:27:FF:52:F1:CA:05:44:FF:BD:3F:5E:EF:EE:8F"] }
+      }
+]
